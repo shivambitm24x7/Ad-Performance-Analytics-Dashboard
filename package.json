@@ -1,0 +1,53 @@
+{
+  "name": "analytics-dashboard",
+  "version": "0.1.0",
+  "description": "A custom analytics dashboard built with nodejs and react",
+  "main": "server.js",
+  "scripts": {
+    "test_server": "jest ./ --passWithNoTests",
+    "test_client": "cd client && yarn test",
+    "test": "concurrently \"yarn test_server\" \"yarn test_client\"",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "node server.js",
+    "client": "cd client && npm start",
+    "build": "cd client && yarn build"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "./client",
+      "./node_modules"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jrc356/analytics-dashboard.git"
+  },
+  "keywords": [
+    "nodejs",
+    "react",
+    "analytics"
+  ],
+  "author": "Jon R. Corbin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jrc356/analytics-dashboard/issues"
+  },
+  "homepage": "https://github.com/Jrc356/analytics-dashboard#readme",
+  "devDependencies": {
+    "concurrently": "^4.1.1",
+    "eslint": "^6.2.1",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-flowtype": "^4.2.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "googleapis": "^42.0.0",
+    "jest": "^24.9.0",
+    "socket.io": "^2.2.0"
+  }
+}
